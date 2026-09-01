@@ -7,15 +7,94 @@
 </head>
 <body>
     <h1>Principais Formatações</h1>
+    
     <h2> Negrito/Destaque</h2>
     <p>Frase em <b>negrito</b> sem semantica</p>
     <p>Frase em <strong>negrito</strong> com semantica</p>
+    
     <br>
+   
     <h2>Itálico/Ênfase</h2>
     <p> Frase em <i>Itálico</i> sem semantica</p>
     <p> Frase em <em>Itálico</em> com semantica</p>
-    <br>
-    <h2>Texto Marcado</h2>
     
+    <br>
+   
+    <h2>Texto Marcado</h2>
+    <p> Frase com <mark>texto marcado</mark></p>
+    <p> Outra frase com <mark style="background-color: aqua;"> texto marcado</mark> agora utilizando o CSS</p>
+
+    <br>
+
+    <h2>Texto Grande vs Pequeno</h2>
+     <p>Frase com um texto <big>Grande</big> e tambem com texto <small>Pequeno</small> somente em html.</p>
+
+     <br>
+    
+     <h2>Texto Deletado</h2>
+     <p>Frase com um texto <del>que foi excluído</del>.</p>
+     
+     <br>
+
+     <h2>Texto Inserido</h2>
+     <p>Frase com um <ins>texto inserido destacado</ins> com semantica</p>
+     <p>Frase com um <u>texto inserido destacado</u> sem semantica</p>
+
+     <br>
+
+     <h2>Texto sobrescrito</h2>
+    <p>nesta frase temos um exemplo <sup> de texto sobrescrito </sup> usando a tag SUP (com semântica)</p>
+
+    <br>
+   
+    <h2>Texto subscrito</h2>
+    <p>nesta frase temos um exemplo <sub> de texto subscrito </sub> usando a tag SUB (com semântica)</p>
+    
+    <br>
+
+    <h2>Trecho de código fonte</h2>
+    <p>neste exemplo vou demonstrar um trecho de um código</p>
+    <p>inserindo o comando <code>document.getElementById('edtCodigo')</code> que é um comando de java script </p>
+    <pre>
+        <code>
+            import math
+
+# Coeficientes da equação
+a = float(input("Digite o valor de a: "))
+b = float(input("Digite o valor de b: "))
+c = float(input("Digite o valor de c: "))
+
+# Calculando o delta
+delta = b**2 - 4*a*c
+
+print(f"Delta = {delta}")
+
+# Verificando as raízes
+if delta > 0:
+    x1 = (-b + math.sqrt(delta)) / (2*a)
+    x2 = (-b - math.sqrt(delta)) / (2*a)
+    print(f"Raízes reais e diferentes: x1 = {x1}, x2 = {x2}")
+elif delta == 0:
+    x = -b / (2*a)
+    print(f"Raiz real e única: x = {x}")
+else:
+    real = -b / (2*a)
+    imag = math.sqrt(-delta) / (2*a)
+    print(f"Raízes complexas: x1 = {real} + {imag}i, x2 = {real} - {imag}i")
+        </code>
+    </pre>
+    <h2>Citações (quotation) simples </h2>
+    <p>Segundo Steve jobs <q> A tecnologia move o mundo </q></p>
+
+    <h2>Citações completas (livros)</h2>
+    <p>Segundo Sandra Kussunoki<blockquote>
+        Dados existentes sobre intervenções cirúrgicas nos corpos conteporâneos visando à obtennção de um corpo mais próximmo do padrão estético tais como lipoaspiração, prótese de silicone, entre outras, comprovam essa busca obssesiva pelo  ideal de perfeição, que é baseado principalmente na magreza, e explicitam a centralidade do culto ao corpo na pós-moderninade.</p>
+    </blockquote>
+    <h2>Abreviações</h2>
+    <p>estamos estudando  <abbr title="Hypertext Markup Language ">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr></p>
+    <h2>Texto invertido</h2>
+    <p><bdo dir="ltr">estou estudando HTML</bdo></p>
+    <p><bdo dir="rtl">estou estudando HTML</bdo></p>
+
 </body>
 </html>
