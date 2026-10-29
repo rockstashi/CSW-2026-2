@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Inscrição para Vaga de Estágio</title>
+</head>
+<body>
+
+    <header>
+        <h1>Inscrição para Vaga de Estágio</h1>
+        <p>Preencha os dados abaixo para se candidatar à vaga.</p>
+    </header>
+
+    <main>
+        <form action="/inscricao" method="post" enctype="multipart/form-data">
+
+            <div>
+                <label for="nome">Nome completo:</label>
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    autocomplete="name"
+                    required
+                    minlength="3"
+                    maxlength="100"
+                    placeholder="Digite seu nome completo">
+            </div>
+
+            <div>
+                <label for="email">E-mail:</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    autocomplete="email"
+                    required
+                    maxlength="254"
+                    placeholder="exemplo@email.com">
+            </div>
+
+            <div>
+                <label for="celular">Celular:</label>
+                <input
+                    type="tel"
+                    id="celular"
+                    name="celular"
+                    autocomplete="tel"
+                    required
+                    maxlength="20"
+                    placeholder="(99) 99999-9999">
+            </div>
+
+            <div>
+                <label for="area">Área de interesse:</label>
+                <select
+                    id="area"
+                    name="area"
+                    autocomplete="off"
+                    required>
+                    <option value="" selected disabled>
+                        Selecione uma área
+                    </option>
+                    <option value="tecnologia">Tecnologia</option>
+                    <option value="administracao">Administração</option>
+                    <option value="recursos-humanos">Recursos Humanos</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="financeiro">Financeiro</option>
+                    <option value="outra">Outra</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="curriculo">Currículo em PDF:</label>
+                <input
+                    type="file"
+                    id="curriculo"
+                    name="curriculo"
+                    accept=".pdf,application/pdf"
+                    required>
+                <p>Envie seu currículo no formato PDF.</p>
+            </div>
+
+            <div>
+                <input
+                    type="checkbox"
+                    id="consentimento"
+                    name="consentimento"
+                    value="sim"
+                    required>
+                <label for="consentimento">
+                    Li e concordo com o tratamento dos meus dados pessoais
+                    para fins de recrutamento e seleção, conforme a
+                    Política de Privacidade e a LGPD.
+                </label>
+            </div>
+
+            <button type="submit">Enviar inscrição</button>
+            <button type="reset">Limpar formulário</button>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>Seus dados serão tratados conforme a Política de Privacidade da empresa.</p>
+    </footer>
+
+</body>
+</html>
