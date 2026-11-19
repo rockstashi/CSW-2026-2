@@ -5,15 +5,25 @@ function Calcular(){
 
 
     let result;
-    switch (operation ==="+") {
+    switch (operation) {
+        case "+":
         result =parseFloat(num1) + parseFloat(num2);
-    } case (operation === "-"){
+        break;
+        case "-":
         result =parseFloat(num1) - parseFloat(num2);
-    } case (operation === "*"){
+        break;
+        case "*":
         result =parseFloat(num1) * parseFloat(num2);
-    } case (operation === "/"){
+        break;
+        case "/":
+            if (parseFloat(num2) === 0) {
+                result = "Error: Division by zero";
+            }
+            else {
         result =parseFloat(num1) / parseFloat(num2);
-    }    
+        }
+
+    }  
     
 
    document.getElementById("resultado").textContent = result;
